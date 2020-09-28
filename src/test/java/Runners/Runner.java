@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/Features/Feature.feature",
-glue = "StepDef",
-        dryRun = true
+glue = "StepDef"
+       // dryRun = true
 )
 public class Runner {
 }
