@@ -1,8 +1,10 @@
 package StepDef;
 
-import PageObject.HomePageObject;
-import PageObject.ProductDescObject;
-import io.cucumber.java.en.And;
+import PageObject.*;
+import core.WebDriverFactory;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,58 +12,81 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import PageObject.CmnPageObject;
 
 public class StepDefs {
    public static final Logger logger= LogManager.getLogger(StepDefs.class);
 
 
     WebDriver driver;
+    String base_url = "https://amazon.in";
+    int implicit_wait_timeout_in_sec = 20;
+    Scenario scn;
+
     CmnPageObject cmnpageobject;
     HomePageObject homepageobject;
     ProductDescObject productdescobject;
+    SearchPageObject searchpageobject;
+    SignInPageObject  signinpageobject;
 
-    public StepDefs(WebDriver driver)
-    {
-        this.driver=driver;
-        PageFactory.initElements(driver,this);
+
+
+    @Before
+    public void setUp(Scenario scn) throws Exception {
+        this.scn = scn;
+        System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32 (2)\\chromedriver.exe");
+        driver=new ChromeDriver();
+        String browserName = WebDriverFactory.getBrowserName();
+        driver = WebDriverFactory.getWebDriverForBrowser(browserName);
+        logger.info("Browser invoked.");
+
+        cmnpageobject = new CmnPageObject(driver);
+        homepageobject = new HomePageObject(driver);
+        productdescobject = new ProductDescObject(driver);
+        searchpageobject = new SearchPageObject(driver);
+        signinpageobject = new SignInPageObject(driver);
     }
 
-    @Given("User open the browser")
-    public void user_open_the_browser()
+        @After
+        public void cleanUp()
     {
-           System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
-             driver=new ChromeDriver();
-             driver.manage().window().maximize();
-             logger.info("Chrome browser is opened");
-    }
+        WebDriverFactory.quitDriver();
+        //driver.close();
+            scn.log("Browser Closed");
+        }
 
-    @And("user navigated to the home application url")
+
+    @Given("User navigated to the home application url")
     public void user_navigated_to_the_home_application_url() {
-        driver.get("https://www.amazon.in/");
-        logger.info("Amazon website is opened");
+        WebDriverFactory.navigateToTheUrl(base_url);
+        scn.log("Browser navigated to URL: " + base_url);
 
-
-
-
+        String Expected = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
+       cmnpageobject.Validate_pageTitle(Expected);
     }
 
-    @And("user serach for the product {string}")
-    public void user_serach_for_the_product(String string) {
-
+    @When("User Search for product {string}")
+    public void user_search_for_product(String productName) {
+        cmnpageobject.Search_Text_box(productName);
+        cmnpageobject.Search_Btn();
+        scn.log("Product Searched" + productName);
     }
 
-    @When("User click on the search product")
-    public void user_click_on_the_search_product() {
-
+    @Then("Search Result page is displayed")
+    public void search_result_page_is_displayed() {
+     searchpageobject.ValidateProductSearchIsSuccessfull();
     }
 
-    @Then("pdroduct description open in a new tab")
-    public void pdroduct_description_open_in_a_new_tab() {
-
+    @When("User click on any product")
+    public void user_click_on_any_product() {
+       searchpageobject.ClickOnTheProductLink(0);
     }
 
+    @Then("Product Description is displayed in new tab")
+    public void product_description_is_displayed_in_new_tab() {
+        WebDriverFactory.switchBrowserToTab();
+        scn.log("Switched to the new window/tab");
 
+   productdescobject.ValidateProductTileIsCorrectlyDisplayed();
+   productdescobject.ValidateAddToCartButtonIsCorrectlyDisplayed();
+    }
 }

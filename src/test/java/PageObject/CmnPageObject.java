@@ -2,111 +2,112 @@ package PageObject;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.junit.Assert;
+
 public class CmnPageObject {
-    public static final Logger logger= LogManager.getLogger(CmnPageObject.class);
+    private static final Logger logger = LogManager.getLogger(CmnPageObject.class);
     WebDriver driver;
+    private By search_Text_Box = By.id("twotabsearchtextbox");
+    private By Search_Btn = By.xpath("//input[@Value = 'Go']");
+    private By DroppDownList = By.id("nav-hamburger-menu");
+    private By Nav_Link_logo = By.xpath("//a[@class='nav-logo-link']");
+    private By Nav_Link_Cart = By.id("nav-cart");
+    private By Nav_Link_prime = By.id("nav-link-prime");
+    private By Nav_Link_Orders = By.id("nav-orders");
+    private By Nav_Link_Account = By.id("nav-link-accountList");
 
-    @FindBy(id="twotabsearchtextbox")
-    WebElement SearchTextBox;
+    private String hamburger_menu_category_link_xpath =  "//div[@id='hmenu-content']//div[text()='%s']";
+    private String hamburger_menu_sub_category_link_xpath =  "//div[@id='hmenu-content']//a[text()='%s']";
 
-    @FindBy(xpath="//div[@id='nav-logo']//span[1]")
-    WebElement Logo;
+    public CmnPageObject(WebDriver driver) {
+        this.driver = driver;
 
-    @FindBy(xpath="//div[@id='nav-cart-text-container']")
-    WebElement Cart;
+    }
+    public void Search_Text_box(String text) {
+        WebDriverWait Waittill = new WebDriverWait(driver,20);
+        WebElement Elements_Srch_Box = Waittill.until(ExpectedConditions.elementToBeClickable(search_Text_Box));
+        Elements_Srch_Box.sendKeys(text);
+        logger.info(" Value Enterted in Search Box" + text);
+    }
+    public void Search_Btn() {
+        driver.findElement(Search_Btn).click();
+        logger.info("Search button Clicked" );
 
-    @FindBy(xpath="//span[contains(text(),'& Orders')]")
-    WebElement ReturnsAndOrders;
+    }
+    public void Click_On_Hmenu_Button() {
+        driver.findElement(DroppDownList).click();
+        logger.info("Clicked on Hamburger Menu");
+    }
+    public void Click_On_Hmenu_Category_Link(String linkText) {
+        By byElement = By.xpath(String.format(hamburger_menu_category_link_xpath,linkText));
+        driver.findElement(byElement);
+        logger.info("Clicked on Hmburger menu Cetogories" + linkText);
 
-    @FindBy(xpath="//a[@id='nav-link-prime']//span[contains(text(),'Prime')]")
-    WebElement TryPrime;
+    }
+    public void Click_on_Hmenu_Sub_Category_Menu_Link(String linkText) {
+        By byElement = By.xpath(String.format(hamburger_menu_sub_category_link_xpath, linkText));
+        driver.findElement(byElement).click();
+        logger.info("Clicked on Humburger Sub-Menu" + linkText);
+    }
+    public void Validetion_Hamburger_Menu_Displeyed() {
+        boolean b = driver.findElement(DroppDownList).isDisplayed();
+        Assert.assertEquals("Hamburger menu Link",true, b);
+    }
+    public void Validate_Amazon_Logo() {
+        boolean b = driver.findElement(Nav_Link_logo).isDisplayed();
+        Assert.assertEquals("Navigation Link Logo", true, b);
 
-    @FindBy(className="nav-input")
-    WebElement searchBtn;
+    }
+    public void Validate_pageTitle(String ExectedTitle) {
+        WebDriverWait Wait = new WebDriverWait(driver,20);
+        boolean b = Wait.until(ExpectedConditions.titleContains(ExectedTitle));
+        Assert.assertEquals("Title Validation", true, b);
+        logger.info("Page Title Mactched" + ExectedTitle);
+    }
 
-    @FindBy(id="nav-hamburger-menu")
-    WebElement DropDownList;
-
-    public CmnPageObject(WebDriver driver)
+    public void ValidatePresentInHeaderSection(String text) throws Exception
     {
-        this.driver=driver;
-        PageFactory.initElements(driver,this);
-    }
-
-
-    public void Search_Text_Box(String text)
-    {
-        WebDriverWait Waittill=new WebDriverWait(driver,20);
-        SearchTextBox=Waittill.until(ExpectedConditions.elementToBeClickable(SearchTextBox));
-        SearchTextBox.sendKeys(text);
-        logger.info("value entered in the search box");
-
-    }
-public void Click_Search_Btn()
-{
-    searchBtn.click();
-    logger.info("search button is clicked");
-}
-
-public void Click_On_Hamburger_Menu()
-{
-    DropDownList.click();
-    logger.info("Click on DropDownList menu");
-}
-
-public void validate_Page_Title(String ExpectedTitle)
-{
-    WebDriverWait Wait=new WebDriverWait(driver,20);
-    boolean b=Wait.until(ExpectedConditions.titleContains(ExpectedTitle));
-    Assert.assertEquals("Title Validation",true,b);
-    logger.info(" Page title matched" + ExpectedTitle);
-}
-
-public void Validate_Present_in_Header_section(String text) throws Exception
-{
-    boolean b=false;
-    switch (text.toLowerCase().trim())
-    {
-        case "Amazon prime logo":
-            b=Logo.isDisplayed();
-            break;
-
-        case "hamburger menu":
-            b=DropDownList.isDisplayed();
-            break;
-
-        case "Returns and Order":
-            b= ReturnsAndOrders.isDisplayed();
-            break;
-
-        case "Try Prime":
-            b= TryPrime.isDisplayed();
-            break;
-
-        case "Cart":
-            b= Cart.isDisplayed();
-            break;
-
-        default:
-            logger.fatal("Header link description is not present in the case.Please add the description first");
-            throw new Exception("Header link description is not present in the case.Please add the description first");
-    }
-    if(b) {
-        logger.info("Header link is displayed" + text);
-        Assert.assertEquals("Header link is displayed", true, b);
-    }
-    else{
-        logger.fatal("Header link is not displayed" +text);
-        Assert.fail("header link is not displayed"+text);
+        boolean b = false;
+        switch(text.toLowerCase().trim())
+        {
+            case "hamburger menu":
+                b = driver.findElement(DroppDownList).isDisplayed();
+                break;
+            case "Amazon prime logo":
+                b = driver.findElement(Nav_Link_logo).isDisplayed();
+                break;
+            case "Account And list link":
+                b = driver.findElement(Nav_Link_Account).isDisplayed();
+                break;
+            case "Return And Orders":
+                b = driver.findElement(Nav_Link_Orders).isDisplayed();
+                break;
+            case "your Prime Link":
+                b= driver.findElement(Nav_Link_prime).isDisplayed();
+                break;
+            case "Cart link":
+                b = driver.findElement(Nav_Link_Cart).isDisplayed();
+                break;
+            case "Search Text box":
+                b = driver.findElement(search_Text_Box).isDisplayed();
+                break;
+            default:
+                logger.fatal("Header Link Description is not present in the case. Please add link description first.");
+                throw new Exception("Header Link Description is not present in the case. Please add link description first.");
+        }
+        if(b) {
+            logger.info("Header link is Displayed" + text);
+            Assert.assertEquals("Header Link displayed",true, b);
+        }else {
+            logger.fatal("Header Link is not displayed: " + text);
+            Assert.fail("Header Link is not displayed: " + text);
+        }
     }
 }
-}
+
