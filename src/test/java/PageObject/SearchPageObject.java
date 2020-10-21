@@ -1,13 +1,12 @@
 package PageObject;
 
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,20 +18,16 @@ public class SearchPageObject {
 
     private WebDriver driver;
 
+    private By search_refinement_categories_segment  = By.id("s-refinements");
+    private By product_link_list = By.xpath("//a[@class='a-link-normal a-text-normal']");
 
-    @FindBy(xpath="//a[@class='a-link-normal a-text-normal']")
-    WebElement product_link_list;
-
-    @FindBy(id="s-refinements")
-    WebElement search_refinement_categories_segment;
-
+    //Section 3: Paratmerize the constuctor
     public SearchPageObject(WebDriver driver){
         this.driver = driver;
-        PageFactory.initElements(driver,this);
     }
 
     public void ValidateProductSearchIsSuccessfull(){
-        if ((search_refinement_categories_segment).isDisplayed()){
+        if (driver.findElement(search_refinement_categories_segment).isDisplayed()){
             Assert.assertTrue(true);
             logger.info("Search Page is displayed because refinement category is displayed");
         }else{
@@ -42,16 +37,16 @@ public class SearchPageObject {
     }
 
     public String ClickOnTheProductLink(int productIndex){
-        //List<WebElement> listOfProducts = driver.findElements();
-        List<WebElement> listOfProducts = driver.findElements((By) product_link_list);
+        //listOfProducts will have all the links displayed in the search box
+        List<WebElement> listOfProducts = driver.findElements(product_link_list);
         logger.info("Number of products searched: " + listOfProducts.size());
 
-
+        //Link on the  link with argument productIndex
         listOfProducts.get(productIndex).click();
         logger.info("Clicked on the Link in the List with index: " + productIndex +
                 ". Link Text: " + listOfProducts.get(productIndex).getText());
 
-
+        //return the text of the clicked link if further validation is required.
         return listOfProducts.get(productIndex).getText();
 
     }
