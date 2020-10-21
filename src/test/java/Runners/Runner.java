@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 glue = "StepDef",
         //dryRun = true;
     plugin={"pretty",
-            "html:target/html/",
+            "html:target/report.html/",
             "json:target/json/file.json"},
             publish=true,
     dryRun=false
