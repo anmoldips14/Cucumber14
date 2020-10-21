@@ -9,10 +9,14 @@
       #Then pdroduct description open in a new tab
 
 
-    @ui @healthcheck
+   @ui @healthcheck
     Feature: E-commerce Project Web Site Health Check
 
-    Scenario: User is able to Open the browser, navigate to the URL and Search for Product
+      Background: Navigation to the URL
+        Given User navigated to the home application url
+
+
+      Scenario: User is able to Open the browser, navigate to the URL and Search for Product
       Given User navigated to the home application url
       When User Search for product "Laptop"
       Then Search Result page is displayed
@@ -22,3 +26,17 @@
       And User Search for product "Earphone"
       When User click on any product
       Then Product Description is displayed in new tab
+
+
+
+
+
+      Scenario Outline: User is able to search multiple products
+        Given User navigated to the home application url
+        When User Search for product "<product_name>"
+        Then Search Result page is displayed
+        Examples:
+          |product_name|
+          | laptop     |
+          | earphone   |
+          | computer   |
