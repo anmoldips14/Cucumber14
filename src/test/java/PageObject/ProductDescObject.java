@@ -20,7 +20,7 @@ public class ProductDescObject {
     @FindBy(id="productTitle")
     WebElement product_title;
 
-    @FindBy(id="add_to_cart_button")
+    @FindBy(css="#add_to_cart_button")
     WebElement add_to_cart_button;
 
     public  ProductDescObject(WebDriver driver){
