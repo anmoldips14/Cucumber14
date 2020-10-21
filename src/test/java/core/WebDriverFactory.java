@@ -48,7 +48,7 @@ public class WebDriverFactory {
     }
 
     public static void quitDriver(){
-        driver.quit();
+        driver.close();
         logger.info("Driver closed");
     }
     public static void switchBrowserToTab(){
