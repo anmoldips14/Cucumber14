@@ -18,7 +18,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class StepDefs {
    public static final Logger logger= LogManager.getLogger(StepDefs.class);
 
-
+//to check CICD pipeline on Github
     WebDriver driver;
     String base_url = "https://amazon.in";
     int implicit_wait_timeout_in_sec = 20;
