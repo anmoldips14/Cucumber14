@@ -1,0 +1,23 @@
+2020-Oct-14 17:08:44 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-14 17:08:46 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-14 17:08:46 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-14 17:08:55 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-14 17:08:55 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-14 17:08:55 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxLaptop
+2020-Oct-14 17:08:58 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-14 17:08:59 PM [main] INFO  PageObject.SearchPageObject - Search Page is displayed because refinement category is displayed
+2020-Oct-14 17:09:01 PM [main] INFO  core.WebDriverFactory - Driver closed
+2020-Oct-14 17:09:08 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-14 17:09:10 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-14 17:09:10 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-14 17:09:18 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-14 17:09:18 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-14 17:09:18 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxEarphone
+2020-Oct-14 17:09:21 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-14 17:09:21 PM [main] INFO  PageObject.SearchPageObject - Number of products searched: 26
+2020-Oct-14 17:09:22 PM [main] INFO  PageObject.SearchPageObject - Clicked on the Link in the List with index: 0. Link Text: LUMIFORD Ultimate U30 in-Ear Wired Earphones with HD Sound, 10mm Dynamic Drivers, in-line mic with Controllers, Durable Tangle Free Cable (Black)
+2020-Oct-14 17:09:22 PM [main] INFO  core.WebDriverFactory - List of windows found: 2
+2020-Oct-14 17:09:22 PM [main] INFO  core.WebDriverFactory - Windows handles: [CDwindow-A5AA8A5D374627B4905A5E09F7007EC2, CDwindow-D34B8D37ECCAAB56F4C872F649618B0F]
+2020-Oct-14 17:09:22 PM [main] INFO  core.WebDriverFactory - Switched to the new window/tab
+2020-Oct-14 17:09:25 PM [main] INFO  PageObject.ProductDescObject - Product Title is displayed
+2020-Oct-14 17:09:47 PM [main] INFO  core.WebDriverFactory - Driver closed

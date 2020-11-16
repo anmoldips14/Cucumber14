@@ -1,0 +1,23 @@
+2020-Oct-14 16:29:34 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-14 16:29:36 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-14 16:29:36 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-14 16:29:46 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-14 16:29:46 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-14 16:29:47 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxLaptop
+2020-Oct-14 16:29:50 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-14 16:29:50 PM [main] INFO  PageObject.SearchPageObject - Search Page is displayed because refinement category is displayed
+2020-Oct-14 16:29:51 PM [main] INFO  core.WebDriverFactory - Driver closed
+2020-Oct-14 16:29:58 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-14 16:30:00 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-14 16:30:00 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-14 16:30:09 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-14 16:30:09 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-14 16:30:09 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxEarphone
+2020-Oct-14 16:30:14 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-14 16:30:14 PM [main] INFO  PageObject.SearchPageObject - Number of products searched: 26
+2020-Oct-14 16:30:16 PM [main] INFO  PageObject.SearchPageObject - Clicked on the Link in the List with index: 0. Link Text: SNOKOR by Infinix iRocker Stix (Black) True Wireless Earphones with 14.2mm Dynamic Bass Boost Driver, Type C Quick Charging, Up to 16hrs Playtime, Bluetooth v5.0 and Ultralight Buds
+2020-Oct-14 16:30:16 PM [main] INFO  core.WebDriverFactory - List of windows found: 2
+2020-Oct-14 16:30:16 PM [main] INFO  core.WebDriverFactory - Windows handles: [CDwindow-AE42A4AE2ADC96E2942D4D5DCF1A7CFC, CDwindow-68E4F6722267A21D503C69112F211715]
+2020-Oct-14 16:30:16 PM [main] INFO  core.WebDriverFactory - Switched to the new window/tab
+2020-Oct-14 16:30:20 PM [main] INFO  PageObject.ProductDescObject - Product Title is displayed
+2020-Oct-14 16:30:41 PM [main] INFO  core.WebDriverFactory - Driver closed

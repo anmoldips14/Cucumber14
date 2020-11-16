@@ -1,0 +1,58 @@
+2020-Oct-22 18:52:51 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-22 18:52:53 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-22 18:52:53 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-22 18:52:58 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:52:59 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:53:01 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:53:01 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:53:02 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxLaptop
+2020-Oct-22 18:53:06 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-22 18:53:06 PM [main] INFO  PageObject.SearchPageObject - Search Page is displayed because refinement category is displayed
+2020-Oct-22 18:53:07 PM [main] INFO  core.WebDriverFactory - Driver closed
+2020-Oct-22 18:53:15 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-22 18:53:17 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-22 18:53:17 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-22 18:53:26 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:53:26 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:53:29 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:53:29 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:53:29 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxEarphone
+2020-Oct-22 18:53:35 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-22 18:53:35 PM [main] INFO  PageObject.SearchPageObject - Number of products searched: 31
+2020-Oct-22 18:53:36 PM [main] INFO  PageObject.SearchPageObject - Clicked on the Link in the List with index: 0. Link Text: boAt Bassheads 225 in Ear Wired Earphones with Mic(Black)
+2020-Oct-22 18:53:36 PM [main] INFO  core.WebDriverFactory - List of windows found: 1
+2020-Oct-22 18:53:36 PM [main] INFO  core.WebDriverFactory - Windows handles: [CDwindow-E78E292A62CCA90C70C19B52C5B745CB]
+2020-Oct-22 18:53:38 PM [main] INFO  core.WebDriverFactory - Driver closed
+2020-Oct-22 18:53:46 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-22 18:53:48 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-22 18:53:48 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-22 18:53:55 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:53:55 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:53:58 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:53:58 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:53:59 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search Boxlaptop
+2020-Oct-22 18:54:02 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-22 18:54:02 PM [main] INFO  PageObject.SearchPageObject - Search Page is displayed because refinement category is displayed
+2020-Oct-22 18:54:04 PM [main] INFO  core.WebDriverFactory - Driver closed
+2020-Oct-22 18:54:11 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-22 18:54:14 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-22 18:54:14 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-22 18:54:17 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:54:17 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:54:19 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:54:19 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:54:19 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search Boxearphone
+2020-Oct-22 18:54:22 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-22 18:54:22 PM [main] INFO  PageObject.SearchPageObject - Search Page is displayed because refinement category is displayed
+2020-Oct-22 18:54:23 PM [main] INFO  core.WebDriverFactory - Driver closed
+2020-Oct-22 18:54:31 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-22 18:54:33 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-22 18:54:33 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-22 18:54:38 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:54:38 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:54:39 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-22 18:54:39 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-22 18:54:39 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search Boxcomputer
+2020-Oct-22 18:54:43 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-22 18:54:43 PM [main] INFO  PageObject.SearchPageObject - Search Page is displayed because refinement category is displayed
+2020-Oct-22 18:54:44 PM [main] INFO  core.WebDriverFactory - Driver closed

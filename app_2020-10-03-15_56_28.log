@@ -1,0 +1,8 @@
+2020-Oct-03 15:56:40 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-03 15:56:43 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-03 15:56:43 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-03 15:56:51 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-03 15:57:09 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-03 15:57:11 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-03 15:57:11 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-03 15:57:21 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in

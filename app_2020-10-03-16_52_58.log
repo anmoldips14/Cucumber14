@@ -1,0 +1,13 @@
+2020-Oct-03 16:53:11 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-03 16:53:13 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-03 16:53:13 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-03 16:53:30 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-03 16:53:55 PM [main] INFO  core.WebDriverFactory - Driver closed
+2020-Oct-03 16:54:07 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-03 16:54:09 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-03 16:54:09 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-03 16:54:21 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-03 16:54:22 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-03 16:54:25 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxEarphone
+2020-Oct-03 16:54:33 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-03 16:54:39 PM [main] INFO  core.WebDriverFactory - Driver closed

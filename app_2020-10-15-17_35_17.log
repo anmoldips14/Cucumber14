@@ -1,0 +1,23 @@
+2020-Oct-15 17:35:30 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-15 17:35:33 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-15 17:35:33 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-15 17:35:42 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-15 17:35:43 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-15 17:35:44 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxLaptop
+2020-Oct-15 17:35:49 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-15 17:35:49 PM [main] INFO  PageObject.SearchPageObject - Search Page is displayed because refinement category is displayed
+2020-Oct-15 17:35:54 PM [main] INFO  core.WebDriverFactory - Driver closed
+2020-Oct-15 17:36:02 PM [main] INFO  core.WebDriverFactory - Chrome Browser invoked
+2020-Oct-15 17:36:04 PM [main] INFO  core.WebDriverFactory - Driver maximized and implicit time out set to 20 seconds
+2020-Oct-15 17:36:04 PM [main] INFO  StepDef.StepDefs - Browser invoked.
+2020-Oct-15 17:36:10 PM [main] INFO  core.WebDriverFactory - Browser navigated to the url: https://amazon.in
+2020-Oct-15 17:36:10 PM [main] INFO  PageObject.CmnPageObject - Page Title MactchedOnline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+2020-Oct-15 17:36:10 PM [main] INFO  PageObject.CmnPageObject -  Value Enterted in Search BoxEarphone
+2020-Oct-15 17:36:13 PM [main] INFO  PageObject.CmnPageObject - Search button Clicked
+2020-Oct-15 17:36:13 PM [main] INFO  PageObject.SearchPageObject - Number of products searched: 26
+2020-Oct-15 17:36:14 PM [main] INFO  PageObject.SearchPageObject - Clicked on the Link in the List with index: 0. Link Text: LUMIFORD Ultimate U20 in-Ear Wired Earphones with HD Sound, 10mm Powerfull Dynamic Drivers for Effective Bass, in-line mic with Controllers, Durable Tangle Free Perfect Length Cable (Blue)
+2020-Oct-15 17:36:14 PM [main] INFO  core.WebDriverFactory - List of windows found: 2
+2020-Oct-15 17:36:14 PM [main] INFO  core.WebDriverFactory - Windows handles: [CDwindow-F9E332E227D19CE9BDD3AF54F9641EC1, CDwindow-B09649518AFB706C31C0E3433735573B]
+2020-Oct-15 17:36:14 PM [main] INFO  core.WebDriverFactory - Switched to the new window/tab
+2020-Oct-15 17:36:18 PM [main] INFO  PageObject.ProductDescObject - Product Title is displayed
+2020-Oct-15 17:36:20 PM [main] INFO  core.WebDriverFactory - Driver closed
